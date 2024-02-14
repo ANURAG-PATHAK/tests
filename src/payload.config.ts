@@ -6,8 +6,6 @@ import { Category } from "./collections/Category";
 import { Sites } from "./collections/Sites";
 import { TechStack } from "./collections/TechStack";
 import { Media } from "./collections/Media";
-import User from "./collections/User";
-
 import dotenv from "dotenv";
 import path from "path";
 dotenv.config({
@@ -20,7 +18,6 @@ export default buildConfig({
         admin: "/admin",
     },
     admin: {
-        user: User.slug,
         bundler: webpackBundler(),
         meta: {
             titleSuffix: "- HelpCenterHive",
