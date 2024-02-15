@@ -7,6 +7,9 @@ export const Category: CollectionConfig = {
     },
     access: {
         read: () => true,
+        create: ({ req: { user } }) => user && user.role === "admin",
+        update: ({ req: { user } }) => user && user.role === "admin",
+        delete: ({ req: { user } }) => user && user.role === "admin",
     },
     fields: [
         {

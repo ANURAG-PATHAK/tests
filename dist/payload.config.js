@@ -11,6 +11,7 @@ var Category_1 = require("./collections/Category");
 var Sites_1 = require("./collections/Sites");
 var TechStack_1 = require("./collections/TechStack");
 var Media_1 = require("./collections/Media");
+var Users_1 = require("./collections/Users");
 var dotenv_1 = __importDefault(require("dotenv"));
 var path_1 = __importDefault(require("path"));
 dotenv_1.default.config({
@@ -18,11 +19,12 @@ dotenv_1.default.config({
 });
 exports.default = (0, config_1.buildConfig)({
     serverURL: process.env.NEXT_PUBLIC_SERVER_URL || "",
-    collections: [Sites_1.Sites, Category_1.Category, TechStack_1.TechStack, Media_1.Media],
+    collections: [Users_1.Users, Sites_1.Sites, Category_1.Category, TechStack_1.TechStack, Media_1.Media],
     routes: {
         admin: "/admin",
     },
     admin: {
+        user: "users",
         bundler: (0, bundler_webpack_1.webpackBundler)(),
         meta: {
             titleSuffix: "- HelpCenterHive",

@@ -7,12 +7,9 @@ export const Media: CollectionConfig = {
     },
     access: {
         read: () => true,
-        create: ({ req: { user } }) =>
-            user && user.email === "pathakanurag605@gmail.com",
-        update: ({ req: { user } }) =>
-            user && user.email === "pathakanurag605@gmail.com",
-        delete: ({ req: { user } }) =>
-            user && user.email === "pathakanurag605@gmail.com",
+        create: ({ req: { user } }) => user && user.role === "admin",
+        update: ({ req: { user } }) => user && user.role === "admin",
+        delete: ({ req: { user } }) => user && user.role === "admin",
     },
     upload: {
         staticURL: "/media",
