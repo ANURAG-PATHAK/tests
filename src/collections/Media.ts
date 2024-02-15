@@ -1,3 +1,4 @@
+import path from "path";
 import { CollectionConfig } from "payload/types";
 
 export const Media: CollectionConfig = {
@@ -12,7 +13,7 @@ export const Media: CollectionConfig = {
         delete: ({ req }) => req.user.email === "pathakanurag605@gmail.com",
     },
     upload: {
-        staticURL: "/media",
+        staticURL: path.resolve(process.cwd(), "media"),
         staticDir: "media",
         mimeTypes: ["image/*"],
     },
