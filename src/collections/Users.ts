@@ -6,7 +6,7 @@ export const Users: CollectionConfig = {
         useAsTitle: "email",
     },
     access: {
-        read: ({ req }) => req.user.role === "admin",
+        read: () => true,
         create: () => true,
         update: ({ req }) => req.user.role === "admin",
         delete: ({ req }) => req.user.role === "admin",
@@ -14,7 +14,7 @@ export const Users: CollectionConfig = {
     fields: [
         {
             name: "role",
-            defaultValue: "user",
+            defaultValue: "admin",
             required: true,
             type: "select",
             options: [
