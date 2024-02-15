@@ -6,7 +6,6 @@ import { Category } from "./collections/Category";
 import { Sites } from "./collections/Sites";
 import { TechStack } from "./collections/TechStack";
 import { Media } from "./collections/Media";
-import { Users } from "./collections/Users";
 import dotenv from "dotenv";
 import path from "path";
 dotenv.config({
@@ -14,7 +13,7 @@ dotenv.config({
 });
 export default buildConfig({
     serverURL: process.env.NEXT_PUBLIC_SERVER_URL || "",
-    collections: [Users, Sites, Category, TechStack, Media],
+    collections: [ Sites, Category, TechStack, Media],
     routes: {
         admin: "/admin",
     },
