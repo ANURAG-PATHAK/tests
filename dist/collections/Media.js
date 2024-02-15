@@ -9,16 +9,16 @@ exports.Media = {
     access: {
         read: function () { return true; },
         create: function (_a) {
-            var user = _a.req.user;
-            return user && user.role === "admin";
+            var req = _a.req;
+            return req.user.role === "admin";
         },
         update: function (_a) {
-            var user = _a.req.user;
-            return user && user.role === "admin";
+            var req = _a.req;
+            return req.user.role === "admin";
         },
         delete: function (_a) {
-            var user = _a.req.user;
-            return user && user.role === "admin";
+            var req = _a.req;
+            return req.user.role === "admin";
         },
     },
     upload: {

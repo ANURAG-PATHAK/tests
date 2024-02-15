@@ -7,7 +7,10 @@ exports.Users = {
         useAsTitle: "email",
     },
     access: {
-        read: function () { return true; },
+        read: function (_a) {
+            var req = _a.req;
+            return req.user.role === "admin";
+        },
         create: function () { return true; },
         update: function (_a) {
             var req = _a.req;

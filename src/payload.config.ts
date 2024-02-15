@@ -16,7 +16,7 @@ export default buildConfig({
     serverURL: process.env.NEXT_PUBLIC_SERVER_URL || "",
     collections: [Users, Sites, Category, TechStack, Media],
     routes: {
-        admin: "admin",
+        admin: "/admin",
     },
     admin: {
         user: "users",

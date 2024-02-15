@@ -6,10 +6,10 @@ export const Users: CollectionConfig = {
         useAsTitle: "email",
     },
     access: {
-        read: () => true,
+        read: ({ req }) => req.user.role === "admin",
         create: () => true,
-        update: ({ req }: { req: any }) => req.user.role === "admin",
-        delete: ({ req }: { req: any }) => req.user.role === "admin",
+        update: ({ req }) => req.user.role === "admin",
+        delete: ({ req }) => req.user.role === "admin",
     },
     fields: [
         {
