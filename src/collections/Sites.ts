@@ -7,6 +7,12 @@ export const Sites: CollectionConfig = {
     },
     access: {
         read: () => true,
+        create: ({ req: { user } }) =>
+            user && user.email === "pathakanurag605@gmail.com",
+        update: ({ req: { user } }) =>
+            user && user.email === "pathakanurag605@gmail.com",
+        delete: ({ req: { user } }) =>
+            user && user.email === "pathakanurag605@gmail.com",
     },
     fields: [
         {
