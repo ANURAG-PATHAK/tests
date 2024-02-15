@@ -21,9 +21,13 @@ exports.Users = {
     fields: [
         {
             name: "role",
-            type: "select",
-            options: ["admin", "user"],
+            defaultValue: "user",
             required: true,
+            type: "select",
+            options: [
+                { label: "Admin", value: "admin" },
+                { label: "User", value: "user" },
+            ],
         },
     ],
 };

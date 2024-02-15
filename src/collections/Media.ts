@@ -7,9 +7,9 @@ export const Media: CollectionConfig = {
     },
     access: {
         read: () => true,
-        create: () => true,
-        update: () => true,
-        delete: () => true,
+        create: ({ req: { user } }) => user && user.role === "admin",
+        update: ({ req: { user } }) => user && user.role === "admin",
+        delete: ({ req: { user } }) => user && user.role === "admin",
     },
     upload: {
         staticURL: "/media",
