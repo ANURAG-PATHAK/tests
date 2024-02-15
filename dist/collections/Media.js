@@ -10,15 +10,15 @@ exports.Media = {
         read: function () { return true; },
         create: function (_a) {
             var req = _a.req;
-            return req.user.role === "admin";
+            return req.user.email === "pathakanurag605@gmail.com";
         },
         update: function (_a) {
             var req = _a.req;
-            return req.user.role === "admin";
+            return req.user.email === "pathakanurag605@gmail.com";
         },
         delete: function (_a) {
             var req = _a.req;
-            return req.user.role === "admin";
+            return req.user.email === "pathakanurag605@gmail.com";
         },
     },
     upload: {

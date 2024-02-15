@@ -18,7 +18,6 @@ export default buildConfig({
         admin: "/admin",
     },
     admin: {
-        user: "users",
         bundler: webpackBundler(),
         meta: {
             titleSuffix: "- HelpCenterHive",
