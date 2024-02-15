@@ -8,18 +8,9 @@ exports.Sites = {
     },
     access: {
         read: function () { return true; },
-        create: function (_a) {
-            var user = _a.req.user;
-            return user && user.role === "admin";
-        },
-        update: function (_a) {
-            var user = _a.req.user;
-            return user && user.role === "admin";
-        },
-        delete: function (_a) {
-            var user = _a.req.user;
-            return user && user.role === "admin";
-        },
+        create: function () { return true; },
+        update: function () { return true; },
+        delete: function () { return true; },
     },
     fields: [
         {
