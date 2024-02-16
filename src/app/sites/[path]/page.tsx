@@ -91,7 +91,6 @@ const SitePage = () => {
                         height="1500"
                         className="h-full w-full max-w-full"
                     />
-                    {site?.image?.url}
                 </div>
             </div>
             <div className="my-8 flex flex-col justify-center bg-[#EDE8DD] py-8">
@@ -119,6 +118,7 @@ const SitePage = () => {
                                             <Link href={`${item.path}`}>
                                                 <CardHeader>
                                                     <Image
+                                                        unoptimized
                                                         src={
                                                             (
                                                                 item.image as Media
