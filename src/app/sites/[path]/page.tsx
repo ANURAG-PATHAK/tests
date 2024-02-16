@@ -84,7 +84,7 @@ const SitePage = () => {
                 </div>
                 <div className="my-4 mr-4 w-auto border-2">
                     <Image
-                        src={(site?.image as Media)?.url ?? ""}
+                        src={site?.image?.url as string}
                         alt={site?.name}
                         width="1500"
                         height="1500"
