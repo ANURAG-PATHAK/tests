@@ -13,7 +13,7 @@ export const Media: CollectionConfig = {
         delete: ({ req }) => req.user.email === "pathakanurag605@gmail.com",
     },
     upload: {
-        staticURL: path.resolve(process.cwd(), "media"),
+        staticURL: "/media",
         staticDir: "media",
         mimeTypes: ["image/*"],
     },
